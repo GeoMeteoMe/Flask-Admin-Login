@@ -6,11 +6,13 @@
 {% endblock head_css %}
 
 
+
+
 {% block body %}
 {{ super() }}
-<h1> Hello Admin</h1>
+<h1> Hello {{ current_user.username }}</h1>
 <h2> Admin Access Only </h2>
-{{count}}
-
-
+Current date: {{ arg1 }}
 {% endblock body%}
+
+
