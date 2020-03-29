@@ -6,6 +6,7 @@ to avoid cilcular imports.
 
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
+from flask_bcrypt import Bcrypt
 from flask_login import LoginManager
 
 
@@ -16,14 +17,10 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 # initialize instance of databse
 db = SQLAlchemy(app)
+bcrypt = Bcrypt(app)
 
-#initialize login manager dependent on User model
-from my_app.models import User
-
+#initialize login manager
 login_manager = LoginManager(app)
-@login_manager.user_loader
-def load_user(user_id):
-	return User.query.get(user_id)
 
 # admin initialized in admin.py
 from my_app.admin import admin
