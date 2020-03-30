@@ -6,5 +6,9 @@ password = 'password1'
 no css
 
 routes:
+admin
+admin/user
 home
+about
 login
+logout

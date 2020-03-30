@@ -5,16 +5,16 @@
 {{ form.hidden_tag() }}
 
 <div class="form-group">
-    {{ form.username.label(class="") }}
-    {% if form.username.errors %}
-        {{ form.username(class="") }}
+    {{ form.email.label(class="") }}
+    {% if form.email.errors %}
+        {{ form.email(class="") }}
         <div class="">
-            {% for error in form.username.errors %}
+            {% for error in form.email.errors %}
                 <span>{{ error }}</span>
             {% endfor %}
         </div>
     {% else %}
-        {{ form.username(class="") }}
+        {{ form.email(class="") }}
     {% endif %}
 </div>
 
@@ -42,7 +42,7 @@
 </div>
 
 <small class="text-muted ml-2">
-<a href="#">Forgot Password?</a>
+<a href="{{url_for('reset_request')}}">Forgot Password?</a>
 </small>
 
 </form>
