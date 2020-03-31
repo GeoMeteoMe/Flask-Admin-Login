@@ -1,9 +1,14 @@
-run app using: python run.py
+Flask app with admin interface protected by password.
 
-username = 'admin1'
+to run: python run.py
+
+Credentials:
+username = 'admin1@demo.com'
 password = 'password1'
 
-no css
+username = 'admin2@demo.com'
+password = 'password2'
+
 
 routes:
 admin
@@ -12,3 +17,5 @@ home
 about
 login
 logout
+
+no css

@@ -14,12 +14,15 @@
 	<div>
 		{% if current_user.is_authenticated %}
 			<span>Hi there!</span>
-			<a class="" href="{{ url_for('logout') }}">Logout</a>
+			<a class="" href="{{ url_for('main.logout') }}">Logout</a>
 		{%else%}
 			<span>stranger danger</span>
-			<a class="" href="{{ url_for('login') }}">Login</a>
+			<a class="" href="{{ url_for('main.login') }}">Login</a>
 		{% endif %}
 	</div>
+
+	{% block content %}
+	{% endblock content %}
 
 </body>
 </html>
