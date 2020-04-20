@@ -1,0 +1,114 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style-type: none;
+  background-color: transparent;
+  list-style-position: inside;
+}
+
+li {
+  background-color: transparent;
+  text-decoration: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.h1, .h2, .h3, .h4 {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  padding: 0;
+  display: block;
+}
+
+.h1 {
+  font-size: 4rem;
+  line-height: 1;
+}
+
+.h2 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.h3 {
+  font-size: 2rem;
+  line-height: 1.1;
+}
+
+.h4 {
+  font-size: 1.8rem;
+}
+
+.t1 {
+  font-family: "Lato", sans-serif;
+  font-size: 1.6rem;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 80vh 1fr;
+      grid-template-rows: 1fr 80vh 1fr;
+      grid-template-areas: '. head .' '. main .' '. foot .';
+}
+
+.header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: head;
+}
+
+.main {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: main;
+}
+
+.footer {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: foot;
+}
+/*# sourceMappingURL=main.css.map */

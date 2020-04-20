@@ -1,0 +1,40 @@
+
+// Headings
+%heading {
+  font-family: $font-primary;
+  font-weight: 400;
+  padding: 0;
+  display: block;
+}
+
+.h1 {
+  @extend %heading;
+  font-size: 4rem;
+  line-height: 1;
+}
+
+.h2 {
+  @extend %heading;
+  font-size: 3rem;
+  //font-style: normal;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.h3 {
+  @extend %heading;
+  font-size: 2rem;
+  line-height: 1.1;
+}
+
+.h4 {
+  @extend %heading;
+  font-size: 1.8rem;
+}
+
+
+// Body text
+.t1 {
+  font-family: $font-primary;
+  font-size: 1.6rem;
+}

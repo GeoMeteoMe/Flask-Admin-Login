@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Hello World!<h1>
+	<div>
+		{% if current_user.is_authenticated %}
+			<span>Hi there!</span>
+			<a class="" href="{{ url_for('main.logout') }}">Logout</a>
+		{%else%}
+			<span>stranger danger</span>
+			<a class="" href="{{ url_for('main.login') }}">Login</a>
+		{% endif %}
+	</div>
+
+{% endblock content %}

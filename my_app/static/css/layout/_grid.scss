@@ -1,0 +1,25 @@
+.container {
+  display: grid;
+  grid-template-columns:  1fr 1fr 1fr;
+  grid-template-rows: 1fr 80vh 1fr;
+  grid-template-areas:
+    '. head .'
+    '. main .'
+    '. foot .';
+}
+
+
+
+
+
+.header { grid-area: head;}
+.main { grid-area: main;}
+.footer { grid-area: foot;}
+
+
+
+
+
+
+
+

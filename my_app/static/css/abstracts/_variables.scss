@@ -1,0 +1,35 @@
+// Responsive breakpoints
+$bp-xl: 75rem;   // 1200px
+$bp-lg: 62.5rem;	// 1000px
+$bp-md: 50rem;		// 800px
+$bp-sm: 25rem;	// 400px
+
+
+// Regular font family
+// @import url()
+$font-primary: 'Lato',sans-serif;;
+$font-secondary: 'Roboto', sans-serif;
+
+// Logo colour
+$color-logo: #4f7942;
+
+// Text colour
+$color-text-1: #1b1b1b; //27,27,27
+$color-text-2: #f2f2f2; //252,252,252;
+
+// Background colour
+$color-bg-primary: #f2f2f2; //252,252,252
+$color-bg-secondary: #2f2f2f; //47,47,47
+
+// Valid and invalid colours
+$color-valid: #53864c;
+$color-invalid: #c5160a;
+
+// Basic colours
+$light-grey: #ededed;
+$mid-grey: #999999;
+$dark-grey: #444444;
+
+$color-black: #000;
+$color-white: #fff;
+

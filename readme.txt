@@ -1,4 +1,5 @@
-Flask app with admin interface protected by password.
+Flask app with customized admin interface protected by password.
+Starter project for a small app.
 
 to run: python run.py
 
@@ -9,6 +10,7 @@ password = 'password1'
 username = 'admin2@demo.com'
 password = 'password2'
 
+SQLite db.
 
 routes:
 admin
@@ -19,3 +21,4 @@ login
 logout
 
 no css
+config file need to be updated with mail username and password.

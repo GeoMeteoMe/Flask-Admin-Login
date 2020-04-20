@@ -1,31 +1,26 @@
 <html lang="en">
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Flask Admin - {{title}}</title>
-  <meta name="description" content="Flask Admin with Login">
-  <meta name="author" content="GeoMeteoMe">
-  <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
-</head>
 
-<body>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>Flask Admin - {{title}}</title>
+		<meta name="description" content="Flask Admin with Login">
+		<meta name="author" content="GeoMeteoMe">
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+	</head>
 
-	<h1>Hello World!<h1>
-	<div>
-		{% if current_user.is_authenticated %}
-			<span>Hi there!</span>
-			<a class="" href="{{ url_for('main.logout') }}">Logout</a>
-		{%else%}
-			<span>stranger danger</span>
-			<a class="" href="{{ url_for('main.login') }}">Login</a>
-		{% endif %}
-	</div>
+	<body class="container">
 
-	{% block content %}
-	{% endblock content %}
+		<header class="header">header here</header>
 
-</body>
+		<main class="main">
+			{% block content %}{% endblock content %}
+		</main>
+
+		<footer class="footer">footer here</footer>
+
+
+
+	</body>
+
 </html>
-
-
-

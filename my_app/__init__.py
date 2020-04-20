@@ -39,7 +39,7 @@ def create_app(config_class=Config): # default configutation
 	mail.init_app(app)
 	# customized admin views
 	from my_app.models import MyAdminIndexView
-	admin.init_app(app,index_view=MyAdminIndexView())
+	admin.init_app(app,index_view=MyAdminIndexView())#how to add 'name'??
 	admin.add_link(MenuLink(name='Home', url='/'))
 	admin.add_link(MenuLink(name='Logout', url='/logout'))
 
