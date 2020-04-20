@@ -1,13 +1,24 @@
 .container {
   display: grid;
   grid-template-columns:  1fr 1fr 1fr;
-  grid-template-rows: 1fr 80vh 1fr;
+  grid-template-rows: 1fr 50vh 1fr;
   grid-template-areas:
     '. head .'
     '. main .'
     '. foot .';
 }
-
+// mobile
+@media screen and (max-width: $bp-md) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    //grid-template-rows: auto 1fr auto auto;
+    grid-template-areas:
+      'head'
+      'main'
+      'foot';
+  }
+}
 
 
 

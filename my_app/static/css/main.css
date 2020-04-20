@@ -84,14 +84,30 @@ table {
   font-size: 1.6rem;
 }
 
+.icon {
+  height: 2rem;
+  width: 3rem;
+  fill: #1b1b1b;
+}
+
 .container {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
-  -ms-grid-rows: 1fr 80vh 1fr;
-      grid-template-rows: 1fr 80vh 1fr;
+  -ms-grid-rows: 1fr 50vh 1fr;
+      grid-template-rows: 1fr 50vh 1fr;
       grid-template-areas: '. head .' '. main .' '. foot .';
+}
+
+@media screen and (max-width: 50rem) {
+  .container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: 'head' 'main' 'foot';
+  }
 }
 
 .header {
