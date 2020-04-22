@@ -1,5 +1,6 @@
 from flask import Blueprint
-from flask import render_template, url_for, flash, redirect, request
+from flask import render_template, url_for, flash, redirect
+from flask import request, make_response, session
 from my_app import db, mail, bcrypt
 from my_app.main.forms import LoginForm, RequestResetForm, ResetPasswordForm
 #from my_app.admin import bcrypt
@@ -18,6 +19,48 @@ def home():
 @main.route('/about')
 def about():
 	return render_template('about.html', title='About')
+
+@main.route('/cookies')
+def cookies():
+    res = make_response(render_template('cookies.html', title='Cookies'))
+
+    cookies = request.cookies
+
+    flavor = cookies.get('flavor')
+    choc_type = cookies.get('chocolate chip')
+    chewy = cookies.get('chewy')
+
+    print('Cookie:::', cookies)
+    print('Cookie:::', flavor, choc_type, chewy)
+
+    """
+    Parameter	Default	Description
+    key     required	The key (name) of the cookie
+    value	""	    The value of the cookie
+    max_age	None	Number of seconds or None (default)
+    expires	None	The date of then the cookie expires, must be a datetime object
+    path	None	Limits the cookie to a given path
+    domain	None	specify a domain able to read the cookie (default is the domain that set it)
+    secure	False	If True, the cookie will only be available over HTTPS
+    httponly	False	Disallow JavaScript to access the cookie (Limited browser support)
+    samesite	False	Limits the scope of where the cookie is accessible to the same site
+    """
+    res.set_cookie(
+        "flavor",
+        value="chocolate chip",
+        max_age=10, # in seconds
+        expires=None,
+        path=request.path,
+        domain=None,
+        secure=False,
+        httponly=False,
+        #samesite=False,
+        )
+
+    res.set_cookie("chocolate type", "dark")
+    res.set_cookie("chewy", "yes")
+    return res
+
 
 
 # Login/Logout
@@ -40,6 +83,7 @@ def login():
 def logout():
     logout_user()
     return redirect(url_for('main.home'))
+
 
 
 # Password reset

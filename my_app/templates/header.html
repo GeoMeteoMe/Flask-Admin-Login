@@ -1,14 +1,36 @@
 {% block header %}
 
-<div>
-		{% if current_user.is_authenticated %}
-			<span>Hi there!</span>
-			<a class="" href="{{ url_for('main.logout') }}">Logout</a>
-		{%else%}
-			<span>stranger danger</span>
-			<a class="" href="{{ url_for('main.login') }}">Login</a>
-		{% endif %}
+<div class="menu-wrap">
+	<input class="toggler" type="checkbox">
+	<div class="burger">
+		<b class="burger__line"></b>
 	</div>
+	<div class="menu">
+		<div class="menu__bg">
+			<div class="nav">
+				<ul class="nav__ul">
+					<li class="nav__li"><a class="nav__link" href="{{ url_for('main.home') }}">Home</a>
+					<li>
+					<li class="nav__li"><a class="nav__link" href="{{ url_for('main.about') }}">About</a>
+					<li>
+					<li class="nav__li"><a class="nav__link" href="{{ url_for('main.cookies') }}">Cookies</a>
+					<li>
+
+						{% if current_user.is_authenticated %}
+					<li class="nav__li"><a class="nav__link" href="{{ url_for('main.logout') }}">Logout</a>
+					<li>
+						{% else %}
+					<li class="nav__li"><a class="nav__link" href="{{ url_for('main.login') }}">Login</a>
+					<li>
+						{% endif %}
+
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+
 
 
 {% endblock header %}
